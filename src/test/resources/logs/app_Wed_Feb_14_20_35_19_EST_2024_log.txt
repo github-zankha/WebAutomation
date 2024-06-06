@@ -1,0 +1,1 @@
+INFO    2024-02-14 20:35:19,975 [main] utils.Loggers  - Product sorted by Low to High Price

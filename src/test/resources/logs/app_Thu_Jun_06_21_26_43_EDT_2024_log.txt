@@ -1,0 +1,1 @@
+INFO    2024-06-06 21:26:43,308 [main] utils.Loggers  - Basic Blue Jeans - View Cart link virified

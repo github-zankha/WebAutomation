@@ -7,9 +7,10 @@ import org.selenium.enums.AuthorType;
 import org.selenium.enums.CategoryType;
 import org.selenium.pages.HomePage;
 import org.selenium.pages.StorePage;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import utils.Loggers;
+
+import static org.testng.Assert.assertEquals;
 
 
 public class E2ETest extends BaseTest {
@@ -21,19 +22,20 @@ public class E2ETest extends BaseTest {
        StorePage strPage = new StorePage(getdr());
        homePage.openURL("");
        homePage.clickAccountMenu().LoginThrConfig();
-       Assert.assertEquals(homePage.getPageTitle(), "Account – AskOmDch");
+       assertEquals(homePage.getPageTitle(), "Account – AskOmDch");
 
        //Click
         homePage.loadHomePage();
-        Assert.assertEquals(homePage.getPageTitle(), "AskOmDch – Become a Selenium automation expert!");
+        assertEquals(homePage.getPageTitle(), "AskOmDch – Become a Selenium automation expert!");
         homePage.clickShopeNowBtn(); //clicking shopenowbutton navigaes store page
 
         //verify title of store page
-        Assert.assertEquals(homePage.getPageTitle(), " Products – AskOmDch");
+        assertEquals(homePage.getPageTitle(), "Products – AskOmDch");
         //click on 'Basic Blue Jeans' to buy under strore page
         strPage.selectBasicBlueJeans();
         //verify 'View Cart' is displayed under- Basic Blue Jeans Prod ID 1205
-        Assert.assertEquals(strPage.viewCartTxtProdID("1205"),"View cart");
+
+     assertEquals(strPage.viewCartTxtProdID(),"View cart");
         Loggers.log.info("Basic Blue Jeans - View Cart link virified");
 
     }

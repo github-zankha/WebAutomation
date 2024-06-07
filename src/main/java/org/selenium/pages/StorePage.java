@@ -10,6 +10,8 @@ import org.selenium.enums.WaitStrategy;
 
 import java.util.*;
 
+import static org.selenium.factories.ExplicityWaitFactory.performExplicitWait;
+
 public class StorePage extends BasePage {
     //private ProductThumbnail productThumbnail;
     public StorePage(WebDriver driver) {
@@ -54,8 +56,9 @@ public class StorePage extends BasePage {
     private final By ViewCartLables_By =By.xpath("//a[@title='View cart']");
     private final By productNamesAddedToCart = By.xpath("//a[@title='View cart']/preceding-sibling::a/h2");
     private final By BasicBlueJeanLbl_By =  By.xpath("//h2[contains(text(),'Basic Blue Jeans')]");
-    private final By BasicBlueJeanAddToCartBtn_By =  By.xpath("//a[@data-product_id='1205']");
 
+    String ProdID = null;
+    private  By BasicBlueJeanAddToCartBtn_By;
     public StorePage enterTextInSearchField(String txt) {
         sendKey(searchTextBox, WaitStrategy.PRESENCE, txt, "Search Field");
         return this;
@@ -244,11 +247,15 @@ public class StorePage extends BasePage {
 
     }
     public void selectBasicBlueJeans(){
-        click(BasicBlueJeanAddToCartBtn_By,WaitStrategy.CLICKABLE,"Add to Cart Button");
+
+        ProdID = driver.findElement(By.xpath("//a[contains(@aria-label,'Basic Blue Jeans')]")).getAttribute("data-product_id");
+        BasicBlueJeanAddToCartBtn_By =  By.xpath("(//a[@data-product_id='"+ProdID+"'])[3]");
+
+        click(BasicBlueJeanAddToCartBtn_By,WaitStrategy.PRESENCE,"Add to Cart Button");
     }
-    public String viewCartTxtProdID(String ProdID)
-    {
-        WebElement ViewCartbyProdID= driver.findElement(By.xpath("//a[@data-product_id='+ProdID+']/following-sibling::a[@title='View cart']"));
+    public String viewCartTxtProdID() throws InterruptedException {
+        performExplicitWait(WaitStrategy.PRESENCE,By.xpath("//a[@data-product_id='"+ProdID+"']/following-sibling::a[@title='View cart']"));
+        WebElement ViewCartbyProdID= driver.findElement(By.xpath("//a[@data-product_id='"+ProdID+"']/following-sibling::a[@title='View cart']"));
         return ViewCartbyProdID.getAttribute("title");
 
 

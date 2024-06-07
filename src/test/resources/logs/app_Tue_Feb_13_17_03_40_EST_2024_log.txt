@@ -1,4 +1,0 @@
-INFO    2024-02-13 17:03:40,311 [main] utils.Loggers  - Form OrderTest: Orders Menu Click
-INFO    2024-02-13 17:03:41,196 [main] utils.Loggers  - Successfully navigated to Stores page
-INFO    2024-02-13 17:03:42,847 [main] utils.Loggers  - Navigated to Product Page searching: 'Shirt' as a result product
-INFO    2024-02-13 17:03:44,895 [main] utils.Loggers  - Navigated page product search: Shirt

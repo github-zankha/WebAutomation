@@ -1,4 +1,5 @@
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\Components\MyHeader.java
+C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\pages\SrchProductsPage.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\pages\OrdersPage.java
 C:\Selenium\workspace\WebAutomation\src\main\java\utils\IconUtils.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\driver\DriverManagerEdge.java
@@ -10,7 +11,9 @@ C:\Selenium\workspace\WebAutomation\src\main\java\utils\PropertyUtils.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\Reports\ExtentManager.java
 C:\Selenium\workspace\WebAutomation\src\main\java\utils\OSInfoUtils.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\pages\StorePage.java
+C:\Selenium\workspace\WebAutomation\src\main\java\RoughWork\ListProcutNamePrice.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\enums\DriverType.java
+C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\pages\StoreAccessoriesPage.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\driver\DriverManagerChrome.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\driver\DriverManagerFactory.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\Components\ProductThumbnail.java
@@ -36,3 +39,4 @@ C:\Selenium\workspace\WebAutomation\src\main\java\utils\BrowserOSInfoUtils.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\enums\CategoryType.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\annotations\FrameworkAnnotation.java
 C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\enums\EnvType.java
+C:\Selenium\workspace\WebAutomation\src\main\java\org\selenium\pages\SearchProdShirt.java
